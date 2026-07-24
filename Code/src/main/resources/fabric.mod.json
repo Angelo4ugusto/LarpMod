@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "template-mod",
+	"id": "larpsahur",
 	"version": "${version}",
-	"name": "Template Mod",
+	"name": "LarpSahur",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -12,22 +12,18 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/template-mod/icon.png",
+	"icon": "assets/larpsahur/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"larpsahur.lapr.TemplateMod"
+			"net.larpesons.larpsahur.LarpSahur"
 		],
-		"client": [
-			"larpsahur.lapr.client.TemplateModClient"
+		"fabric-datagen": [
+			"net.larpesons.larpsahur.LarpSahurDataGenerator"
 		]
 	},
 	"mixins": [
-		"template-mod.mixins.json",
-		{
-			"config": "template-mod.client.mixins.json",
-			"environment": "client"
-		}
+		"larpsahur.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
